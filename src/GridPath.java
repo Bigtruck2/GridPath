@@ -32,12 +32,11 @@ public class GridPath {
      */
     public int sumPath(int row, int col) {
         int sum = 0;
-        while (row!=4&&col!=4){
+        while (row!= grid.length&&col!=grid[0].length){
             sum+=grid[row][col];
             Location loc = getNextLoc(row,col);
             row = loc.getRow();
             col = loc.getCol();
-            System.out.printf("(%d,%d)", row,col);
         }
         return sum;
     }
